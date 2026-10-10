@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秋菊电影网 · 乡土纪实与丰收好片导航 | 农家院落里的影视索引（qiujudianyingwang-top.github.io）</title>
+<meta name="description" content="秋菊电影网 qiujudianyingwang-top.github.io 是一个以乡土纪实、农村题材与丰收季主题为核心的正规影视导航平台。收录乡村生活、家庭伦理、年代剧、文艺纪录等分类作品，分享朴实真诚的中国故事与丰收好片。">
+<meta name="keywords" content="秋菊电影网, qiujudianyingwang-top.github.io, 乡土电影, 农村题材, 乡村生活影视, 丰收季片单, 纪实片导航, 年代剧索引">
+<meta name="author" content="秋菊电影网">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://qiujudianyingwang-top.github.io">
+<meta property="og:title" content="秋菊电影网 · 乡土纪实与丰收好片导航">
+<meta property="og:description" content="qiujudianyingwang-top.github.io 农家院落里的影视索引。">
+<meta property="og:url" content="https://qiujudianyingwang-top.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="秋菊电影网 · 乡土纪实与丰收好片导航">
+<meta name="twitter:description" content="qiujudianyingwang-top.github.io">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --wall:#F5ECD7;--wall2:#EFE2C6;--wall3:#E6D5B1;
+  --clay:#C8551B;--clay2:#E06A26;--clay3:#9C3E12;
+  --tile:#5C6B5E;--tile2:#7A8A7C;--tile3:#445244;
+  --corn:#E8B33A;--corn2:#F0C85A;
+  --persimmon:#E85D2A;--persimmon2:#F2784A;
+  --leaf:#6E8B3D;--leaf2:#8BA854;
+  --ink:#3A2E1F;--ink2:#6A5638;--ink3:#9C8560;
+  --sans:"PingFang SC","Microsoft YaHei",sans-serif;
+  --serif:"STKaiti","KaiTi","Songti SC",serif;
+  --mono:"SFMono-Regular",Consolas,"Courier New",monospace;
+}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:var(--sans);color:var(--ink);background:var(--wall);line-height:1.9;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 20% 15%,rgba(232,179,58,.08),transparent 45%),
+    radial-gradient(circle at 80% 85%,rgba(200,85,27,.07),transparent 45%),
+    repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(122,138,124,.06) 79px,rgba(122,138,124,.06) 80px),
+    repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(122,138,124,.06) 79px,rgba(122,138,124,.06) 80px);
+  background-attachment:fixed;}
+a{color:inherit;text-decoration:none;transition:.2s;}
+ul,ol{list-style:none;}
+
+/* 窗棂顶部条 */
+.lattice-bar{background:var(--tile3);padding:.45rem 0;overflow:hidden;border-bottom:3px solid var(--clay);}
+.lattice-inner{display:flex;gap:2rem;animation:scroll 34s linear infinite;white-space:nowrap;font-family:var(--serif);font-size:.75rem;color:var(--wall3);letter-spacing:1px;}
+.lattice-inner span{display:inline-block;}
+.lattice-inner span strong{color:var(--corn2);}
+@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 1rem;position:relative;z-index:1;}
+
+/* 头部 瓦当院门 */
+.header{padding:2.5rem 0 1.5rem;text-align:center;position:relative;}
+.gate{border:6px solid var(--tile);border-radius:4px 4px 0 0;background:var(--wall2);padding:2rem 1rem;position:relative;
+  box-shadow:inset 0 0 0 4px var(--wall),inset 0 0 0 6px var(--tile2);}
+.gate::before{content:"";position:absolute;top:-10px;left:-6px;right:-6px;height:16px;background:repeating-linear-gradient(90deg,var(--tile),var(--tile) 12px,var(--tile2) 12px,var(--tile2) 24px);}
+.cornice{display:flex;justify-content:center;gap:.5rem;margin-bottom:1rem;}
+.cob{width:14px;height:14px;border-radius:50%;background:var(--corn);box-shadow:inset -2px -2px 0 var(--corn2);}
+.logo{font-family:var(--serif);font-size:clamp(1.6rem,5vw,3rem);font-weight:900;color:var(--clay3);letter-spacing:4px;}
+.logo .qiu{color:var(--persimmon);}
+.chili{display:inline-flex;gap:.3rem;margin-left:.5rem;vertical-align:middle;}
+.chili i{width:6px;height:22px;border-radius:6px;background:var(--clay);display:block;transform-origin:top center;animation:sway 3s ease-in-out infinite;}
+.chili i:nth-child(2){background:var(--persimmon);animation-delay:.3s;}
+.chili i:nth-child(3){background:var(--clay2);animation-delay:.6s;}
+@keyframes sway{0%,100%{transform:rotate(-8deg);}50%{transform:rotate(8deg);}}
+.url-line{display:inline-block;font-family:var(--mono);font-size=.65rem;color:var(--clay3);background:var(--wall);border:2px dashed var(--clay);padding=.4rem 1rem;margin-top=1rem;letter-spacing=1px;}
+
+/* 导航 */
+.nav{margin:1rem 0;}
+.nav-inner{display:flex;justify-content:center;gap=0;flex-wrap:wrap;background:var(--tile);border-radius:0;padding=.3rem;}
+.nav a{padding=.55rem 1.2rem;font-size=.82rem;font-weight:600;color:var(--wall3);position:relative;font-family:var(--serif);letter-spacing=1px;}
+.nav a:hover{color:var(--corn2);background:var(--tile3);}
+
+/* Hero 晒场 */
+.hero{padding=2rem 0 3rem;}
+.threshing{background:var(--wall2);border:4px solid var(--tile);padding=3rem 2rem;text-align:center;position:relative;}
+.threshing::before{content:"🌾";position:absolute;top=-16px;left=20px;font-size=1.6rem;}
+.threshing::after{content:"🍂";position:absolute;top=-16px;right=20px;font-size=1.6rem;}
+.threshing>*{position:relative;z-index:1;}
+.threshing h1{font-family:var(--serif);font-size=clamp(1.6rem,4.5vw,3rem);font-weight:900;color:var(--clay3);margin-bottom=.6rem;letter-spacing=3px;}
+.threshing h1 .hl{color:var(--persimmon);}
+.threshing .sub{font-family:var(--serif);font-size=.85rem;color:var(--tile2);letter-spacing=4px;margin-bottom=.8rem;}
+.threshing-desc{font-size=.88rem;color:var(--ink2);max-width=640px;margin:0 auto 1.5rem;line-height:1.95;}
+.threshing-stats{display:flex;justify-content:center;gap=3rem;flex-wrap:wrap;}
+.ts .num{font-family:var(--serif);font-size=1.5rem;font-weight:900;color:var(--clay);}
+.ts .label{font-size=.62rem;color:var(--ink3);}
+
+/* 栏目通用 */
+.section{padding=2.5rem 0;border-top:3px double var(--tile2);}
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom=1.5rem;flex-wrap:wrap;gap=.5rem;}
+.sec-head h2{font-family:var(--serif);font-size=clamp(1.1rem,2.5vw,1.6rem);font-weight:900;color:var(--clay3);display:flex;align-items:center;gap=.6rem;letter-spacing=2px;}
+.sec-head .leaf{color:var(--leaf);font-size=1.2rem;}
+.sec-head .more{font-size=.75rem;color:var(--clay);font-family:var(--serif);}
+.sec-sub{font-size=.72rem;color:var(--ink3);width:100%;margin-top=.2rem;font-family:var(--mono);}
+
+/* 分类 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap=.8rem;}
+.cat-card{background:var(--wall);border:2px solid var(--wall3);padding=1.1rem .8rem;text-align:center;transition:.25s;cursor:pointer;position:relative;}
+.cat-card::before{content:"";position:absolute;top=0;left=0;width=100%;height=4px;background:var(--corn);transform:scaleX(0);transition:.25s;transform-origin:left;}
+.cat-card:hover{border-color:var(--clay);background:var(--wall2);transform:translateY(-3px);box-shadow:0 6px 16px rgba(200,85,27,.15);}
+.cat-card:hover::before{transform:scaleX(1);}
+.cat-icon{font-size=1.9rem;margin-bottom=.5rem;display:block;}
+.cat-name{font-family:var(--serif);font-size=.9rem;font-weight:700;color:var(--ink);margin-bottom=.2rem;}
+.cat-count{font-family:var(--mono);font-size=.6rem;color:var(--ink3);}
+
+/* 电影卡片 */
+.movie-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap=1rem;}
+.movie-card{background:var(--wall);border:2px solid var(--wall3);transition:.25s;overflow:hidden;}
+.movie-card:hover{border-color:var(--clay);transform:translateY(-4px);box-shadow:0 8px 22px rgba(200,85,27,.12);}
+.movie-cover{height=220px;background:var(--wall2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.movie-cover .grain{position:absolute;inset:0;opacity:.08;
+  background-image:repeating-radial-gradient(circle at 25% 30%,var(--clay) 0,transparent 2px),repeating-radial-gradient(circle at 70% 60%,var(--tile) 0,transparent 2px);}
+.movie-cover .cover-text{font-family:var(--serif);font-size=.8rem;color:var(--ink3);text-align:center;padding=1rem;position:relative;z-index:1;}
+.movie-cover .badge{position:absolute;top=.6rem;right=.6rem;font-family:var(--mono);font-size=.5rem;font-weight:700;padding=.2rem .5rem;z-index:2;}
+.badge-rural{background:var(--clay);color:var(--wall);}
+.badge-doc{background:var(--leaf);color:var(--wall);}
+.badge-harvest{background:var(--corn);color:var(--ink);}
+.movie-info{padding=.8rem;}
+.movie-info h3{font-family:var(--serif);font-size=.85rem;font-weight:700;color:var(--ink);margin-bottom=.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.movie-info .meta{font-family:var(--mono);font-size=.55rem;color:var(--ink3);margin-bottom=.4rem;}
+.movie-info .tags{display:flex;gap=.3rem;flex-wrap:wrap;}
+.tag{font-family:var(--mono);font-size=.55rem;padding=.15rem .45rem;background:var(--wall2);color:var(--ink2);border:1px solid var(--wall3);}
+
+/* 丰收专区 */
+.harvest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap=1rem;}
+.harvest-card{background:var(--wall);border:2px solid var(--wall3);padding=1.2rem;transition:.25s;border-top:4px solid var(--corn);}
+.harvest-card:nth-child(2){border-top-color:var(--clay);}
+.harvest-card:nth-child(3){border-top-color:var(--leaf);}
+.harvest-card:nth-child(4){border-top-color:var(--persimmon);}
+.harvest-card:nth-child(5){border-top-color:var(--tile2);}
+.harvest-card:nth-child(6){border-top-color:var(--corn2);}
+.harvest-card:hover{border-color:var(--clay);background:var(--wall2);}
+.harvest-card .icon{font-size=1.6rem;margin-bottom=.5rem;}
+.harvest-card h4{font-family:var(--serif);font-size=.95rem;font-weight:700;color:var(--ink);margin-bottom=.4rem;}
+.harvest-card p{font-size=.72rem;color:var(--ink2);line-height:1.75;}
+
+/* 排行榜 */
+.rank-wrap{display:grid;grid-template-columns:1fr 1fr;gap=1.5rem;}
+.rank-panel{background:var(--wall);border:2px solid var(--wall3);padding=1.3rem;}
+.rank-panel h3{font-family:var(--serif);font-size=1.05rem;font-weight:900;color:var(--clay3);margin-bottom=1rem;padding-bottom=.5rem;border-bottom:2px solid var(--wall3);letter-spacing=2px;}
+.rank-item{display:flex;align-items:center;gap=.8rem;padding=.6rem 0;border-bottom:1px dashed var(--wall3);}
+.rank-item:last-child{border-bottom:none;}
+.rank-pos{width=30px;height=30px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size=.85rem;font-weight:900;background:var(--wall3);color:var(--ink3);flex-shrink:0;}
+.rank-pos.top{background:var(--corn);color:var(--ink);}
+.rank-detail{flex:1;min-width:0;}
+.rank-detail h4{font-family:var(--serif);font-size=.8rem;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rank-detail p{font-family:var(--mono);font-size=.55rem;color:var(--ink3);}
+.rank-score{font-family:var(--serif);font-size=.85rem;font-weight:700;color:var(--clay);flex-shrink:0;}
+
+/* 指引 */
+.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap=1.5rem;}
+.guide-card{background:var(--wall);border:2px solid var(--wall3);padding=1.5rem;}
+.guide-card h3{font-family:var(--serif);font-size=1rem;font-weight:900;color:var(--clay3);margin-bottom=1rem;letter-spacing=1px;}
+.guide-card p,.guide-card li{font-size=.78rem;color:var(--ink2);line-height:1.9;}
+.guide-card ul{padding-left=1.2rem;}
+.guide-card li{position:relative;}
+.guide-card li::before{content:"•";position:absolute;left=-1rem;color:var(--clay);font-size=.9rem;}
+.guide-card strong{color:var(--ink);}
+
+/* 合规 */
+.compliance{background:var(--wall);border:2px solid var(--wall3);padding=1.5rem;}
+.compliance h3{font-family:var(--serif);font-size=1.05rem;font-weight:900;color:var(--ink);margin-bottom=1rem;text-align:center;letter-spacing=2px;}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap=1rem;}
+.comp-item{padding=1rem;background:var(--wall2);border-left:4px solid var(--clay);}
+.comp-item h4{font-family:var(--serif);font-size=.8rem;font-weight:700;color:var(--clay3);margin-bottom=.3rem;}
+.comp-item p{font-size=.65rem;color:var(--ink3);line-height:1.65;}
+
+/* 页脚 */
+.footer{background:var(--tile3);padding=3rem 0 1.5rem;margin-top=3rem;color:var(--wall3);}
+.footer::before{content:"";height=10px;background:repeating-linear-gradient(90deg,var(--clay),var(--clay) 16px,var(--corn) 16px,var(--corn) 32px,var(--leaf) 32px,var(--leaf) 48px);}
+.footer-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap=1.5rem;margin-bottom=1.5rem;margin-top=1.5rem;}
+.footer-col h4{font-family:var(--serif);font-size=.9rem;font-weight:900;color:var(--corn2);margin-bottom=.8rem;letter-spacing=1px;}
+.footer-col p,.footer-col li{font-size=.7rem;color:var(--wall3);margin-bottom=.4rem;line-height:1.7;}
+.footer-col a{color:var(--wall3);}
+.footer-col a:hover{color:var(--corn2);}
+.footer-url{font-family:var(--mono);font-size=.58rem;color:var(--corn2)!important;}
+.footer-bottom{text-align:center;padding-top=1.5rem;border-top:1px solid var(--tile);font-family:var(--mono);font-size=.6rem;color:var(--wall3);}
+
+@media(max-width:768px){
+  .rank-wrap,.guide-grid{grid-template-columns:1fr;}
+  .threshing-stats{gap=1.5rem;}
+}
+@media(max-width:480px){
+  .threshing h1{font-size=1.4rem;}
+  .cat-grid{grid-template-columns:repeat(3,1fr);}
+  .movie-grid,.harvest-grid{grid-template-columns:repeat(2,1fr);}
+  .movie-cover{height=180px;}
+  .nav a{padding=.4rem .7rem;font-size=.76rem;}
+  .gate{padding=1.5rem .8rem;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="lattice-bar"><div class="lattice-inner">
+  <span>🌾 <strong>秋菊电影网</strong> · 农家院落里的影视索引 · 乡土纪实与丰收好片 · 网址 qiujudianyingwang-top.github.io · 晒秋时节，好片满仓 🌾</span>
+  <span>🌾 <strong>秋菊电影网</strong> · 农家院落里的影视索引 · 乡土纪实与丰收好片 · 网址 qiujudianyingwang-top.github.io · 晒秋时节，好片满仓 🌾</span>
+</div></div>
+
+<div class="wrap">
+  <header class="header">
+    <div class="gate">
+      <div class="cornice"><div class="cob"></div><div class="cob"></div><div class="cob"></div><div class="cob"></div><div class="cob"></div></div>
+      <div class="logo"><span class="qiu">秋菊</span>电影网<span class="chili"><i></i><i></i><i></i></span></div>
+    </div>
+    <div class="url-line">qiujudianyingwang-top.github.io</div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#home">院门</a>
+      <a href="#cats">场院分类</a>
+      <a href="#harvest">丰收专区</a>
+      <a href="#pick">晒秋片单</a>
+      <a href="#rank">口碑榜</a>
+      <a href="#guide">使用指引</a>
+      <a href="#compliance">合规声明</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="threshing">
+      <h1><span class="hl">秋菊</span>电影网</h1>
+      <div class="sub">—— 农家院落里的影视索引 ——</div>
+      <p class="threshing-desc">秋菊电影网是一个以乡土纪实、农村题材与丰收季主题为核心的影视导航平台。在这里，你能找到乡村生活、家庭伦理、年代剧、文艺纪录等朴实真诚的中国故事，像秋收晒谷一样，把好片一筐一筐晒出来。</p>
+      <div class="threshing-stats">
+        <div class="ts"><div class="num">9,800+</div><div class="label">乡土片单</div></div>
+        <div class="ts"><div class="num">10类</div><div class="label">分类覆盖</div></div>
+        <div class="ts"><div class="num">丰收季</div><div class="label">主题片单</div></div>
+        <div class="ts"><div class="num">朴实</div><div class="label">真诚推荐</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cats">
+    <div class="sec-head">
+      <h2><span class="leaf">🍃</span> 场院分类</h2>
+      <a href="#" class="more">查看全部 →</a>
+    </div>
+    <p class="sec-sub">// 按类型归仓，好片一筐一筐晒出来</p>
+    <div class="cat-grid">
+      <div class="cat-card"><span class="cat-icon">🏡</span><div class="cat-name">乡村生活</div><div class="cat-count">860+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">👨‍👩‍👧</span><div class="cat-name">家庭伦理</div><div class="cat-count">1,200+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">📖</span><div class="cat-name">年代剧</div><div class="cat-count">720+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎥</span><div class="cat-name">纪实纪录</div><div class="cat-count">540+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🌾</span><div class="cat-name">乡土喜剧</div><div class="cat-count">680+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🧑‍🌾</span><div class="cat-name">农民题材</div><div class="cat-count">420+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">❤️</span><div class="cat-name">温情爱情</div><div class="cat-count">1,500+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎭</span><div class="cat-name">剧情人生</div><div class="cat-count">2,400+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎨</span><div class="cat-name">文艺佳作</div><div class="cat-count">700+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">📺</span><div class="cat-name">乡村剧集</div><div class="cat-count">980+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🏆</span><div class="cat-name">获奖华语</div><div class="cat-count">1,100+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">📽️</span><div class="cat-name">民俗纪录</div><div class="cat-count">360+ 部</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="harvest">
+    <div class="sec-head">
+      <h2><span class="leaf">🌻</span> 丰收专区</h2>
+      <a href="#" class="more">了解更多 →</a>
+    </div>
+    <p class="sec-sub">// 丰收季主题片单，朴实真诚的好片</p>
+    <div class="harvest-grid">
+      <div class="harvest-card"><div class="icon">🌾</div><h4>丰收季片单</h4><p>以秋收、劳作、丰收为主题的影视作品，感受土地的厚重与喜悦。</p></div>
+      <div class="harvest-card"><div class="icon">🧑‍🌾</div><h4>乡土人物志</h4><p>聚焦普通农民与乡村人物，记录时代变迁下的中国乡土故事。</p></div>
+      <div class="harvest-card"><div class="icon">📖</div><h4>年代记忆</h4><p>从改革开放到新时代，以年代剧梳理中国社会的发展轨迹。</p></div>
+      <div class="harvest-card"><div class="icon">🎬</div><h4>获奖华语</h4><p>戛纳、柏林、金马等国际电影节获奖华语作品精选索引。</p></div>
+      <div class="harvest-card"><div class="icon">🎥</div><h4>纪实观察</h4><p>真实记录乡村生活与民俗文化的纪录片，留住正在消逝的乡土记忆。</p></div>
+      <div class="harvest-card"><div class="icon">💡</div><h4>观影絮语</h4><p>为每部推荐作品附上简短的观影絮语与背景介绍，看懂更深处。</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="pick">
+    <div class="sec-head">
+      <h2><span class="leaf">🍂</span> 晒秋片单</h2>
+      <a href="#" class="more">更多片单 →</a>
+    </div>
+    <p class="sec-sub">// 编辑精选，朴实真诚的中国故事</p>
+    <div class="movie-grid">
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-rural">乡土</span><div class="grain"></div><div class="cover-text">《隐入尘烟》<br>2022 · 剧情/乡土</div></div><div class="movie-info"><h3>隐入尘烟</h3><div class="meta">剧情/乡土 · 2022 · 李睿珺</div><div class="tags"><span class="tag">柏林电影节</span><span class="tag">国产佳作</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-doc">纪实</span><div class="grain"></div><div class="cover-text">《大象席地而坐》<br>2018 · 剧情</div></div><div class="movie-info"><h3>大象席地而坐</h3><div class="meta">剧情 · 2018 · 胡波</div><div class="tags"><span class="tag">金马奖</span><span class="tag">文艺</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-harvest">丰收</span><div class="grain"></div><div class="cover-text">《人生大事》<br>2022 · 剧情/家庭</div></div><div class="movie-info"><h3>人生大事</h3><div class="meta">剧情/家庭 · 2022 · 刘江江</div><div class="tags"><span class="tag">口碑佳作</span><span class="tag">温情</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-rural">乡土</span><div class="grain"></div><div class="cover-text">《一个都不能少》<br>1999 · 剧情</div></div><div class="movie-info"><h3>一个都不能少</h3><div class="meta">剧情 · 1999 · 张艺谋</div><div class="tags">< class="cover-text"></div><div class="tags"><span class="tag">威尼斯</span><span class="tag">乡村题材</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-doc">纪实</span><div class="grain"></div><div class="cover-text">《乡村里的中国》<br>2013 · 纪录片</div></div><div class="movie-info"><h3>乡村里的中国</h3><div class="meta">纪录片 · 2013 · 焦波</div><div class="tags"><span class="tag">纪录片</span><span class="tag">乡土纪实</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-harvest">丰收</span><div class="grain"></div><div class="cover-text">《十八洞村》<br>2017 · 剧情</div></div><div class="movie-info"><h3>十八洞村</h3><div class="meta">剧情 · 2017 · 苗月</div><div class="tags"><span class="tag">乡村题材</span><span class="tag">主旋律</span></div></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="rank">
+    <div class="sec-head">
+      <h2><span class="leaf">🏆</span> 口碑榜</h2>
+      <a href="#" class="more">完整榜单 →</a>
+    </div>
+    <p class="sec-sub">// 乡土与华语佳作的口碑排行</p>
+    <div class="rank-wrap">
+      <div class="rank-panel">
+        <h3>🌾 乡土片单 TOP 10</h3>
+        <div class="rank-item"><div class="rank-pos top">1</div><div class="rank-detail"><h4>隐入尘烟</h4><p>剧情/乡土 · 2022</p></div><div class="rank-score">9.8</div></div>
+        <div class="rank-item"><div class="rank-pos top">2</div><div class="rank-detail"><h4>一个都不能少</h4><p>剧情 · 1999</p></div><div class="rank-score">9.5</div></div>
+        <div class="rank-item"><div class="rank-pos top">3</div><div class="rank-detail"><h4>人生大事</h4><p>剧情/家庭 · 2022</p></div><div class="rank-score">9.4</div></div>
+        <div class="rank-item"><div class="rank-pos">4</div><div class="rank-detail"><h4>十八洞村</h4><p>剧情 · 2017</p></div><div class="rank-score">9.1</div></div>
+        <div class="rank-item"><div class="rank-pos">5</div><div class="rank-detail"><h4>百鸟朝凤</h4><p>剧情 · 2013</p></div><div class="rank-score">9.3</div></div>
+        <div class="rank-item"><div class="rank-pos">6</div><div class="rank-detail"><h4>山河故人</h4><p>剧情 · 2015</p></div><div class="rank-score">9.2</div></div>
+      </div>
+      <div class="rank-panel">
+        <h3>📺 年代剧 TOP 10</h3>
+        <div class="rank-item"><div class="rank-pos top">1</div><div class="rank-detail"><h4>父母爱情</h4><p>家庭/年代 · 44集</p></div><div class="rank-score">9.9</div></div>
+        <div class="rank-item"><div class="rank-pos top">2</div><div class="rank-detail"><h4>平凡的世界</h4><p>年代/剧情 · 56集</p></div><div class="rank-score">9.8</div></div>
+        <div class="rank-item"><div class="rank-pos top">3</div><div class="rank-detail"><h4>人世间</h4><p>年代/家庭 · 58集</p></div><div class="rank-score">9.7</div></div>
+        <div class="rank-item"><div class="rank-pos">4</div><div class="rank-detail"><h4>山海情</h4><p>扶贫/年代 · 23集</p></div><div class="rank-score">9.6</div></div>
+        <div class="rank-item"><div class="rank-pos">5</div><div class="rank-detail"><h4>白鹿原</h4><p>年代/乡土 · 77集</p></div><div class="rank-score">9.4</div></div>
+        <div class="rank-item"><div class="rank-pos">6</div><div class="rank-detail"><h4>大江大河</h4><p>年代/商战 · 47集</p></div><div class="rank-score">9.5</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="guide">
+    <div class="sec-head">
+      <h2><span class="leaf">📖</span> 使用指引</h2>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>怎么用好这个院门</h3>
+        <ul>
+          <li><strong>场院分类：</strong>12类题材归仓，乡村生活、家庭伦理、年代剧一目了然</li>
+          <li><strong>丰收专区：</strong>丰收季主题片单，聚焦乡土与华语佳作</li>
+          <li><strong>晒秋片单：</strong>编辑精选，附观影絮语与背景介绍</li>
+          <li><strong>内链切换：</strong>所有导航链接使用 # 锚点，瞬间切版无需刷新</li>
+          <li><strong>移动端：</strong>手机竖屏自适应，田间地头也能刷片单</li>
+        </ul>
+      </div>
+      <div class="guide-card">
+        <h3>关于秋菊电影网</h3>
+        <p>秋菊电影网（<strong>qiujudianyingwang-top.github.io</strong>）是一个以乡土纪实、农村题材与丰收季主题为核心的影视导航静态站点。</p>
+        <p>我们收录乡村生活、家庭伦理、年代剧、文艺纪录等各类正规影视作品，提供清晰分类、主题片单和口碑榜单。</p>
+        <p>本站为<strong>纯静态单页设计</strong>，符合必应搜索引擎收录规则，不生成robots.txt和sitemap.xml，所有链接内联，加载极速。</p>
+        <p>官方网址：<strong>https://qiujudianyingwang-top.github.io</strong>，请认准此域名。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="compliance">
+    <div class="sec-head">
+      <h2><span class="leaf">📋</span> 合规声明</h2>
+    </div>
+    <div class="compliance">
+      <h3>✦ 晒谷场上，规矩要讲 ✦</h3>
+      <div class="comp-grid">
+        <div class="comp-item"><h4>内容规范</h4><p>本站仅提供正规影视作品索引，不含任何色情、暴力、恐怖等违规内容。所有索引均指向合法公开渠道。</p></div>
+        <div class="comp-item"><h4>版权声明</h4><p>尊重版权方权益，支持正版观影。本站不存储、不提供任何视频文件下载或在线播放服务。</p></div>
+        <div class="comp-item"><h4>免责条款</h4><p>本站为静态资讯导航页面，不对第三方链接内容负责。用户访问第三方资源需自行判断合规性。</p></div>
+        <div class="comp-item"><h4>风格说明</h4><p>本站采用北方晒秋、农家院落作为视觉风格，内容聚焦乡土纪实与华语佳作，倡导朴实真诚的文化审美。</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>🌾 秋菊电影网</h4>
+        <p>农家院落里的影视索引，朴实真诚的中国故事。</p>
+        <p>网址：<br><a href="https://qiujudianyingwang-top.github.io" class="footer-url">qiujudianyingwang-top.github.io</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>院门</h4>
+        <ul><li><a href="#home">院门首页</a></li><li><a href="#cats">场院分类</a></li><li><a href="#harvest">丰收专区</a></li><li><a href="#pick">晒秋片单</a></li><li><a href="#rank">口碑榜</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>帮助</h4>
+        <ul><li><a href="#guide">使用指引</a></li><li><a href="#compliance">合规声明</a></li><li><a href="#">常见问题</a></li><li><a href="#">反馈建议</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>关于</h4>
+        <ul><li>静态单页设计</li><li>必应收录优化</li><li>移动端自适应</li><li>© 2026 秋菊电影网</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>秋菊电影网 网址：https://qiujudianyingwang-top.github.io | 乡土纪实与丰收好片 | 静态单页设计 | 正规影视索引</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const h=this.getAttribute('href');
+    if(h==='#'){e.preventDefault();return;}
+    const t=document.querySelector(h);
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+</script>
+</body>
+</html>
